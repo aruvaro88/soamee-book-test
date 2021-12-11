@@ -7,6 +7,7 @@ import { Link } from "react-router-dom"
 
 export const Booklist = () => {
   const [books, setBooks] = useState([])
+  const [newBook, setNewBook] = useState("")
 
   useEffect(() => {
     getAllBooks().then((books) => {
