@@ -1,16 +1,43 @@
 import React, { useEffect, useState } from "react"
+import "./bookDetils.css"
 import { useParams } from "react-router-dom"
 import { getBookDetails } from "../../Services/books/booksService"
+import { getAuthorDetails } from "../../Services/authors/authorService"
 
-export const BookDetails = (props) => {
+export const BookDetails = () => {
   const [book, setBook] = useState([])
+  const [author, setAuthor] = useState([])
+
   const { id } = useParams()
 
   useEffect(() => {
-    getBookDetails(id).then((book) => {
-      setBook(book)
-      console.log({ id })
-    })
+    getBookDetails(id)
+      .then((book) => {
+        setBook(book)
+      })
+      // .then(
+      //   getAuthorDetails(book.albumId).then((author) => {
+      //     setAuthor(author)
+      //   })
+      // )
   })
-  return <h1>soy los detalles del libro {book.id}</h1>
+  return (
+    <>
+      <div className="page-container">
+        <div className="detail-container">
+          <div className="img-detail-container">
+            <img className="book-img" src={book.url} alt="cover"></img>
+          </div>
+          <div className="data-container">
+            <div className="title-text">
+              <h2 className="title">{book.title}</h2>
+            </div>
+            <div className="author-text">
+              <h4 className="author">{author.title}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
