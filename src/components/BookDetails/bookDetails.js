@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import "./bookDetils.css"
+import "./BookDetails.css"
 import { useParams } from "react-router-dom"
 import { getBookDetails } from "../../Services/books/booksService"
 import { getAuthorDetails } from "../../Services/authors/authorService"
@@ -20,10 +20,11 @@ export const BookDetails = () => {
         })
       }
     })
+
     return () => {
       isMounted = false
     }
-  })
+  }, [id])
   return (
     <>
       <div className="page-container">

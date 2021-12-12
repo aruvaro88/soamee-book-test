@@ -1,6 +1,5 @@
 import React from "react"
-import "./home.css"
-import Button from "react-bootstrap/Button"
+import "./Home.css"
 import { Link } from "react-router-dom"
 
 export const Home = () => {

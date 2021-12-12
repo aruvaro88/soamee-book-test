@@ -1,0 +1,47 @@
+.author-card-container {
+    width: 20%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 0.5px chocolate solid;
+    border-radius: 5px;
+    background-color: bisque;
+    margin: 5px;
+}
+
+.author-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+.title-text {
+    width: 80%;
+}
+
+.author-button-container {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-button {
+    background-color: chocolate;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card-button:hover {
+    background-color: blanchedalmond;
+    color: chocolate;
+    border: 1px chocolate solid;
+}
