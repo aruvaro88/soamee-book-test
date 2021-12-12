@@ -11,15 +11,18 @@ export const BookDetails = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    getBookDetails(id)
-      .then((book) => {
+    let isMounted = true
+    getBookDetails(id).then((book) => {
+      if (isMounted) {
         setBook(book)
-      })
-      // .then(
-      //   getAuthorDetails(book.albumId).then((author) => {
-      //     setAuthor(author)
-      //   })
-      // )
+        getAuthorDetails(book.albumId).then((author) => {
+          setAuthor(author)
+        })
+      }
+    })
+    return () => {
+      isMounted = false
+    }
   })
   return (
     <>
