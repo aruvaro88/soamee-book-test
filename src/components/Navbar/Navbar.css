@@ -1,0 +1,28 @@
+
+
+.navbar-container{
+    height: 60px;
+    width: 100%;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+}
+
+.links-container{
+   width: 20%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.link{
+    margin: 10px;
+    text-decoration: none;
+    color:brown;
+}
+
+.link:hover{
+    font-size: 18px;
+    color: chocolate;
+}
