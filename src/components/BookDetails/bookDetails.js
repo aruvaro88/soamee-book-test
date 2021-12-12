@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getBookDetails } from "../../Services/books/booksService"
 
-export const BookDetails = ({ id }) => {
+export const BookDetails = (props) => {
   const [book, setBook] = useState([])
-  //const { id } = props.match.params.id
+  const { id } = useParams()
 
   useEffect(() => {
     getBookDetails(id).then((book) => {

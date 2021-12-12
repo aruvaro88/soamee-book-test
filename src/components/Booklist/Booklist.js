@@ -14,19 +14,20 @@ export const Booklist = () => {
       setBooks(books)
     })
   })
-  
 
   return (
     <>
-      <h1>Book List</h1>
-      <Link to="/createbook">
-        <Button>Crear libro</Button>
-      </Link>
-      <ul>
+      <div className="booklist-header">
+        <h1>Book List</h1>
+        <Link className="home-button" to="/createbook">
+          Create Book
+        </Link>
+      </div>
+      <div className="content-container">
         {books.map((book) => (
           <BookCard key={book.id} {...book} />
         ))}
-      </ul>
+      </div>
     </>
   )
 }
