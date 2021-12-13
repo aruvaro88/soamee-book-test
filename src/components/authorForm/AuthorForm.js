@@ -24,7 +24,8 @@ export const AuthorForm = () => {
   }
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="create-author-form" onSubmit={handleSubmit}>
+        <p>Type new author's name</p>
         <input type="text" onChange={handleChange} value={newAuthor}></input>
         <button>Create new author</button>
       </form>

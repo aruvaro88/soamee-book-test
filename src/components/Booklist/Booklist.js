@@ -38,7 +38,7 @@ export const Booklist = () => {
           </div>
           <div className="content-container">
             {/* Con map recorremos el array books del estado para leer la informacion y renderizarla en nuestro componente */}
-              {books.map((book) => (
+            {books.map((book) => (
               //Renderizamos un nuevo componente con cada elemento del array, y le pasamos las propiedades del objeto en cuestión
               <BookCard key={book.id} {...book} />
             ))}
