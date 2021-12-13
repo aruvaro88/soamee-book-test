@@ -5,7 +5,7 @@ import { Booklist } from "./components/Booklist/Booklist"
 import { Navbar } from "./components/Navbar/Navbar"
 import { AuthorList } from "./components/authorList/AuthorList"
 import { BookForm } from "./components/BookForm/bookForm"
-import { BookDetails } from "./components/BookDetails/BookDetails"
+import { BookDetails } from "./components/BookDetails/bookDetails"
 import { AuthorDetail } from "./components/authorDetail/AuthorDetail"
 import { AuthorForm } from "./components/authorForm/AuthorForm"
 
