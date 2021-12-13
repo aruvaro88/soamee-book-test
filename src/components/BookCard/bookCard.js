@@ -1,5 +1,5 @@
 import React from "react"
-import "./BookCard.css"
+import "./bookCard.css"
 import { Link } from "react-router-dom"
 
 export const BookCard = ({ id, title, thumbnailUrl }) => {
