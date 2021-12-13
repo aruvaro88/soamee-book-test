@@ -14,8 +14,9 @@ export const getBookDetails = (id) => {
   })
 }
 
-export const createBook = () => {
-  return axios.post("https://jsonplaceholder.typicode.com/photos").then((response) => {
+export const createBook = (newBook) => {
+  return axios.post("https://jsonplaceholder.typicode.com/photos", newBook).then((response) => {
+    console.log(newBook)
     const { data } = response
     return data
   })

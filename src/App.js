@@ -7,9 +7,14 @@ import { AuthorList } from "./components/authorList/AuthorList"
 import { BookForm } from "./components/bookForm/BookForm"
 import { BookDetails } from "./components/bookDetails/BookDetails"
 import { AuthorDetail } from "./components/authorDetail/AuthorDetail"
+import { AuthorForm } from "./components/authorForm/AuthorForm"
 
 function App() {
   return (
+    //Encapsulamos las rutas en el BrowserRouter para permitir la navegación
+    //Dentro de la etiqueta Routes ponemos las rutas navegables que va a tener nuestra app
+    //En este caso el componente Navbar queda fuera ya que siempre será visible en la app
+    //En las rutas de detalle incluimos el :id ya que va a ser un elemento cambiante de la ruta y lo capturaremos en el componente
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -18,6 +23,7 @@ function App() {
         <Route path="/createbook" element={<BookForm />}></Route>
         <Route path="/bookdetail/:id" element={<BookDetails />}></Route>
         <Route path="/authors" element={<AuthorList />}></Route>
+        <Route path="/createauthor" element={<AuthorForm />}></Route>
         <Route path="/authordetail/:id" element={<AuthorDetail />}></Route>
       </Routes>
     </BrowserRouter>

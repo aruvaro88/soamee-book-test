@@ -13,3 +13,11 @@ export const getAuthorDetails = (id) => {
     return data
   })
 }
+
+export const createAuthor = (newAuthor) => {
+  return axios.post("https://jsonplaceholder.typicode.com/albums", newAuthor).then((response) => {
+    console.log(newAuthor)
+    const { data } = response
+    return data
+  })
+}

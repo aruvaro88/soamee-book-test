@@ -3,6 +3,8 @@ import "./BookCard.css"
 import { Link } from "react-router-dom"
 
 export const BookCard = ({ id, title, thumbnailUrl }) => {
+  //Recogemos las propiedades del objeto que vamos a usar en el componente
+
   return (
     <>
       <div className="card-container">
